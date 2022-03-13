@@ -1,4 +1,5 @@
 project "GLFW"
+	staticruntime "on"
 	kind "StaticLib"
 	language "C"
 	targetdir "%{_WORKING_DIR}/builds/%{cfg.shortname}/"
@@ -76,6 +77,10 @@ project "GLFW"
 	filter "configurations:Debug"
 		runtime "Debug"
 		symbols "on"
+
+	filter "configurations:PreRelease"
+		runtime "Release"
+		optimize "on"
 
 	filter "configurations:Release"
 		runtime "Release"
