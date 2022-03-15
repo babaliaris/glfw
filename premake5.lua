@@ -1,5 +1,4 @@
 project "GLFW"
-	staticruntime "on"
 	kind "StaticLib"
 	language "C"
 	targetdir "%{_WORKING_DIR}/builds/%{cfg.shortname}/"
@@ -74,6 +73,10 @@ project "GLFW"
 			"Dwmapi.lib"
 		}
 
+
+	--All Platforms.
+	filter{}
+	
 	filter "configurations:Debug"
 		runtime "Debug"
 		symbols "on"
