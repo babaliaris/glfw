@@ -79,14 +79,14 @@ project "GLFW"
 	--All Platforms.
 	filter{}
 	
-	filter "configurations:Debug"
+	filter "configurations:debug"
 		runtime "Debug"
 		symbols "on"
 
-	filter "configurations:PreRelease"
+	filter "configurations:dist"
 		runtime "Release"
 		optimize "on"
 
-	filter "configurations:Release"
+	filter "configurations:release"
 		runtime "Release"
 		optimize "on"
